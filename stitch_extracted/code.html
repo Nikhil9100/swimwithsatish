@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SwimWithSatish - Loading</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;family=Bebas+Neue&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline": "#8f9097",
+                        "primary-fixed": "#d7e3fc",
+                        "secondary": "#a2e7ff",
+                        "error": "#ffb4ab",
+                        "tertiary-fixed": "#ffddb4",
+                        "inverse-surface": "#e0e3e7",
+                        "primary-container": "#0a1628",
+                        "outline-variant": "#45474c",
+                        "error-container": "#93000a",
+                        "tertiary-fixed-dim": "#ffb955",
+                        "on-secondary-fixed-variant": "#004e5f",
+                        "on-secondary-fixed": "#001f27",
+                        "on-primary-container": "#758096",
+                        "on-tertiary-container": "#b07300",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary-fixed": "#291800",
+                        "inverse-primary": "#535f74",
+                        "surface": "#101417",
+                        "on-secondary-container": "#005669",
+                        "on-primary-fixed-variant": "#3c475b",
+                        "secondary-container": "#00d2fd",
+                        "on-tertiary-fixed-variant": "#633f00",
+                        "on-surface-variant": "#c5c6cd",
+                        "tertiary-container": "#221300",
+                        "on-primary-fixed": "#101c2e",
+                        "on-error": "#690005",
+                        "surface-container-high": "#262a2e",
+                        "surface-container": "#1c2023",
+                        "surface-variant": "#313538",
+                        "surface-tint": "#bbc7df",
+                        "tertiary": "#ffb955",
+                        "on-tertiary": "#452b00",
+                        "background": "#101417",
+                        "surface-container-lowest": "#0b0f12",
+                        "secondary-fixed": "#b4ebff",
+                        "on-surface": "#e0e3e7",
+                        "on-secondary": "#003642",
+                        "inverse-on-surface": "#2d3134",
+                        "surface-container-highest": "#313538",
+                        "surface-dim": "#101417",
+                        "primary-fixed-dim": "#bbc7df",
+                        "on-background": "#e0e3e7",
+                        "surface-bright": "#363a3d",
+                        "primary": "#bbc7df",
+                        "surface-container-low": "#181c1f",
+                        "secondary-fixed-dim": "#3cd7ff",
+                        "on-primary": "#253144"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "40px",
+                        "xl": "80px",
+                        "sm": "16px",
+                        "base": "4px",
+                        "lg": "48px",
+                        "gutter": "20px",
+                        "xs": "8px",
+                        "margin-mobile": "16px",
+                        "md": "24px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "display-lg": ["Bebas Neue"],
+                        "label-bold": ["Inter"],
+                        "headline-lg-mobile": ["Bebas Neue"],
+                        "headline-lg": ["Bebas Neue"],
+                        "headline-md": ["Bebas Neue"],
+                        "label-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "display-lg": ["80px", { "lineHeight": "80px", "letterSpacing": "0.02em", "fontWeight": "400" }],
+                        "label-bold": ["14px", { "lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["36px", { "lineHeight": "36px", "letterSpacing": "0.02em", "fontWeight": "400" }],
+                        "headline-lg": ["48px", { "lineHeight": "48px", "letterSpacing": "0.02em", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "32px", "letterSpacing": "0.03em", "fontWeight": "400" }],
+                        "label-sm": ["12px", { "lineHeight": "16px", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        /* Custom Animations for Loading State */
+        @keyframes fillRing {
+            0% { stroke-dashoffset: 283; }
+            100% { stroke-dashoffset: 0; }
+        }
+        
+        @keyframes deepBreathPulse {
+            0%, 100% { 
+                opacity: 0.8; 
+                transform: scale(0.98); 
+                filter: drop-shadow(0 0 10px rgba(162, 231, 255, 0.2));
+            }
+            50% { 
+                opacity: 1; 
+                transform: scale(1.02); 
+                filter: drop-shadow(0 0 20px rgba(162, 231, 255, 0.6));
+            }
+        }
+        
+        @keyframes splashFadeOut {
+            0% { opacity: 1; backdrop-filter: blur(8px); }
+            100% { opacity: 0; backdrop-filter: blur(0px); visibility: hidden; pointer-events: none; }
+        }
+
+        .animate-loader-ring {
+            stroke-dasharray: 283;
+            animation: fillRing 3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+
+        .animate-breath {
+            animation: deepBreathPulse 3s ease-in-out infinite;
+        }
+
+        .trigger-fade {
+            animation: splashFadeOut 0.8s ease-in-out forwards;
+        }
+
+        .glow-secondary {
+            filter: drop-shadow(0 0 15px rgba(162, 231, 255, 0.5));
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface antialiased min-h-screen overflow-hidden selection:bg-secondary selection:text-on-secondary">
+<!-- SPLASH SCREEN LAYER -->
+<div class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-primary-container" id="splash-container">
+<!-- Procedural Aqua Background Shader -->
+<!-- STITCH_SHADER_START:ANIMATION_15 class="absolute inset-0 w-full h-full opacity-60 mix-blend-screen pointer-events-none" -->
+<div class="absolute inset-0 w-full h-full opacity-60 mix-blend-screen pointer-events-none" style="display:block;">
+<canvas id="shader-canvas-ANIMATION_15" style="display:block;width:100%;height:100%"></canvas>
+<script>
+(function() {
+  const canvas = document.getElementById('shader-canvas-ANIMATION_15');
+
+  // Sync the WebGL drawing-buffer size with the CSS-driven layout size.
+  // This fires on initial layout and whenever the element is resized.
+  function syncSize() {
+    const w = canvas.clientWidth  || 1280;
+    const h = canvas.clientHeight || 720;
+    if (canvas.width !== w || canvas.height !== h) {
+      canvas.width  = w;
+      canvas.height = h;
+    }
+  }
+  if (typeof ResizeObserver !== 'undefined') {
+    new ResizeObserver(syncSize).observe(canvas);
+  }
+  syncSize();
+
+  const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+  if (!gl) return;
+  const vs = `attribute vec2 a_position;
+varying vec2 v_texCoord;
+void main() {
+  v_texCoord = a_position * 0.5 + 0.5;
+  gl_Position = vec4(a_position, 0.0, 1.0);
+}`;
+  const fs = `precision highp float;
+uniform float u_time;
+uniform vec2 u_resolution;
+varying vec2 v_texCoord;
+
+// Simple noise function
+float random(vec2 st) {
+    return fract(sin(dot(st.xy, vec2(12.9898,78.233))) * 43758.5453123);
+}
+
+float noise(vec2 st) {
+    vec2 i = floor(st);
+    vec2 f = fract(st);
+    float a = random(i);
+    float b = random(i + vec2(1.0, 0.0));
+    float c = random(i + vec2(0.0, 1.0));
+    float d = random(i + vec2(1.0, 1.0));
+    vec2 u = f * f * (3.0 - 2.0 * f);
+    return mix(a, b, u.x) + (c - a) * u.y * (1.0 - u.x) + (d - b) * u.x * u.y;
+}
+
+void main() {
+    vec2 uv = v_texCoord;
+    
+    // Create organic water movement
+    float wave = noise(uv * 3.0 + u_time * 0.5) * 0.1;
+    wave += noise(uv * 5.0 - u_time * 0.3) * 0.05;
+    
+    // Aqua/Deep Sea colors based on brand
+    vec3 color1 = vec3(0.039, 0.086, 0.157); // Deep Navy #0A1628
+    vec3 color2 = vec3(0.0, 0.831, 1.0);     // Electric Aqua #00D4FF
+    
+    // Mix colors based on UV and wave motion
+    float mixFactor = uv.y + wave;
+    vec3 finalColor = mix(color1, color2 * 0.4, mixFactor);
+    
+    // Add light "shimmer" at the top
+    float shimmer = pow(1.0 - uv.y, 3.0) * 0.2 * noise(uv * 10.0 + u_time);
+    finalColor += color2 * shimmer;
+
+    gl_FragColor = vec4(finalColor, 1.0);
+}`;
+  function cs(type, src) {
+    const s = gl.createShader(type);
+    gl.shaderSource(s, src);
+    gl.compileShader(s);
+    return s;
+  }
+  const prog = gl.createProgram();
+  gl.attachShader(prog, cs(gl.VERTEX_SHADER, vs));
+  gl.attachShader(prog, cs(gl.FRAGMENT_SHADER, fs));
+  gl.linkProgram(prog);
+  gl.useProgram(prog);
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+  const pos = gl.getAttribLocation(prog, 'a_position');
+  gl.enableVertexAttribArray(pos);
+  gl.vertexAttribPointer(pos, 2, gl.FLOAT, false, 0, 0);
+  const uTime = gl.getUniformLocation(prog, 'u_time');
+  const uRes = gl.getUniformLocation(prog, 'u_resolution');
+  const uMouse = gl.getUniformLocation(prog, 'u_mouse');
+
+  // u_mouse is in pixel coordinates matching u_resolution (ShaderToy convention).
+  // Shaders that need normalized coords should use: u_mouse / u_resolution.
+  let mouse = { x: canvas.width / 2, y: canvas.height / 2 };
+  window.addEventListener('mousemove', (event) => {
+    const rect = canvas.getBoundingClientRect();
+    if (rect.width && rect.height) {
+      const nx = (event.clientX - rect.left) / rect.width;
+      const ny = 1.0 - (event.clientY - rect.top) / rect.height;
+      mouse.x = nx * canvas.width;
+      mouse.y = ny * canvas.height;
+    }
+  });
+
+  function render(t) {
+    if (typeof ResizeObserver === 'undefined') syncSize();
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    if (uTime) gl.uniform1f(uTime, t * 0.001);
+    if (uRes) gl.uniform2f(uRes, canvas.width, canvas.height);
+    if (uMouse) gl.uniform2f(uMouse, mouse.x, mouse.y);
+    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+    requestAnimationFrame(render);
+  }
+  render(0);
+})();
+</script>
+</div>
+<!-- STITCH_SHADER_END:ANIMATION_15 -->
+<!-- Subtle gradient overlay for depth -->
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container via-transparent to-primary-container/50 pointer-events-none"></div>
+<!-- Central Content Wrapper -->
+<div class="relative z-10 flex flex-col items-center justify-center w-full max-w-lg px-margin-mobile md:px-margin-desktop">
+<!-- Circular Loading Indicator -->
+<div class="relative w-48 h-48 md:w-64 md:h-64 flex items-center justify-center mb-12">
+<!-- Track Ring -->
+<svg class="absolute inset-0 w-full h-full transform -rotate-90" viewbox="0 0 100 100">
+<circle class="text-on-primary-container/20" cx="50" cy="50" fill="none" r="45" stroke="currentColor" stroke-width="1.5"></circle>
+</svg>
+<!-- Animated Progress Ring with Glow -->
+<svg class="absolute inset-0 w-full h-full transform -rotate-90 glow-secondary" viewbox="0 0 100 100">
+<circle class="text-secondary animate-loader-ring" cx="50" cy="50" fill="none" r="45" stroke="currentColor" stroke-linecap="round" stroke-width="3"></circle>
+</svg>
+<!-- Inner Branding / Icon -->
+<div class="flex items-center justify-center text-secondary/80 animate-breath">
+<span class="material-symbols-outlined text-6xl" style="font-variation-settings: 'FILL' 0, 'wght' 200;">
+                        water
+                    </span>
+</div>
+</div>
+<!-- Typography -->
+<h1 class="font-headline-lg-mobile md:font-headline-lg text-headline-lg-mobile md:text-headline-lg text-center tracking-wide animate-breath">
+<span class="text-on-surface">TAKE A DEEP BREATH</span>
+<br/>
+<span class="text-secondary">TO DIVE</span>
+</h1>
+<p class="mt-4 font-label-bold text-label-bold text-on-primary-container uppercase tracking-[0.2em] opacity-60">
+                Calibrating Focus
+            </p>
+</div>
+</div>
+<!-- MOCK MAIN CONTENT (Revealed after fade) -->
+<main class="min-h-screen flex flex-col items-center justify-center opacity-0 transition-opacity duration-1000" id="main-content">
+<!-- This represents the page underneath. Suppressed nav components since we are in a splash/transactional flow context for this specific UI snippet -->
+<div class="text-center">
+<span class="material-symbols-outlined text-tertiary text-6xl mb-4" style="font-variation-settings: 'FILL' 1;">
+                pool
+            </span>
+<h2 class="font-headline-md text-headline-md text-on-surface mb-2">Welcome to the Deep End</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mx-auto">
+                Your high-performance journey begins here.
+            </p>
+</div>
+</main>
+<script>
+        // Simulate the 3-second loading sequence and transition
+        document.addEventListener('DOMContentLoaded', () => {
+            const splashContainer = document.getElementById('splash-container');
+            const mainContent = document.getElementById('main-content');
+
+            // Wait 3 seconds for the ring animation to complete, then trigger fade out
+            setTimeout(() => {
+                splashContainer.classList.add('trigger-fade');
+                
+                // Slightly before the fade finishes, fade in the main content for a smooth handoff
+                setTimeout(() => {
+                    mainContent.style.opacity = '1';
+                    document.body.classList.remove('overflow-hidden'); // Allow scrolling if needed later
+                }, 500);
+
+            }, 3000); // 3 seconds matching the CSS animation duration
+        });
+    </script>
+</body></html>
