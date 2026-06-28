@@ -1,0 +1,294 @@
+<!DOCTYPE html><html class="dark scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>SwimWithSatish | Elite Swim Coaching</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-surface": "#e0e3e7",
+                    "on-background": "#e0e3e7",
+                    "on-primary-fixed-variant": "#3c475b",
+                    "surface": "#101417",
+                    "surface-container": "#1c2023",
+                    "on-error-container": "#ffdad6",
+                    "surface-container-high": "#262a2e",
+                    "outline-variant": "#45474c",
+                    "error-container": "#93000a",
+                    "secondary-container": "#00d2fd",
+                    "on-tertiary-fixed-variant": "#633f00",
+                    "on-primary": "#253144",
+                    "secondary": "#a2e7ff",
+                    "outline": "#8f9097",
+                    "on-surface-variant": "#c5c6cd",
+                    "secondary-fixed-dim": "#3cd7ff",
+                    "tertiary-fixed-dim": "#ffb955",
+                    "primary": "#bbc7df",
+                    "surface-variant": "#313538",
+                    "inverse-on-surface": "#2d3134",
+                    "on-primary-container": "#758096",
+                    "surface-container-highest": "#313538",
+                    "on-tertiary-fixed": "#291800",
+                    "background": "#101417",
+                    "tertiary-fixed": "#ffddb4",
+                    "surface-container-lowest": "#0b0f12",
+                    "surface-bright": "#363a3d",
+                    "on-secondary-container": "#005669",
+                    "on-primary-fixed": "#101c2e",
+                    "primary-container": "#0a1628",
+                    "on-error": "#690005",
+                    "surface-tint": "#bbc7df",
+                    "tertiary-container": "#221300",
+                    "on-tertiary-container": "#b07300",
+                    "inverse-primary": "#535f74",
+                    "surface-container-low": "#181c1f",
+                    "tertiary": "#ffb955",
+                    "error": "#ffb4ab",
+                    "primary-fixed-dim": "#bbc7df",
+                    "on-tertiary": "#452b00",
+                    "inverse-surface": "#e0e3e7",
+                    "primary-fixed": "#d7e3fc",
+                    "on-secondary": "#003642",
+                    "surface-dim": "#101417",
+                    "on-secondary-fixed": "#001f27",
+                    "secondary-fixed": "#b4ebff",
+                    "on-secondary-fixed-variant": "#004e5f"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter": "20px",
+                    "lg": "48px",
+                    "sm": "16px",
+                    "margin-desktop": "40px",
+                    "base": "4px",
+                    "xs": "8px",
+                    "md": "24px",
+                    "xl": "80px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "headline-md": [
+                            "Bebas Neue"
+                    ],
+                    "display-lg": [
+                            "Bebas Neue"
+                    ],
+                    "label-sm": [
+                            "Inter"
+                    ],
+                    "headline-lg": [
+                            "Bebas Neue"
+                    ],
+                    "body-md": [
+                            "Inter"
+                    ],
+                    "label-bold": [
+                            "Inter"
+                    ],
+                    "body-lg": [
+                            "Inter"
+                    ],
+                    "headline-lg-mobile": [
+                            "Bebas Neue"
+                    ]
+            },
+            "fontSize": {
+                    "headline-md": [
+                            "32px",
+                            {
+                                    "lineHeight": "32px",
+                                    "letterSpacing": "0.03em",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "display-lg": [
+                            "80px",
+                            {
+                                    "lineHeight": "80px",
+                                    "letterSpacing": "0.02em",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "label-sm": [
+                            "12px",
+                            {
+                                    "lineHeight": "16px",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "headline-lg": [
+                            "48px",
+                            {
+                                    "lineHeight": "48px",
+                                    "letterSpacing": "0.02em",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "24px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "label-bold": [
+                            "14px",
+                            {
+                                    "lineHeight": "20px",
+                                    "letterSpacing": "0.05em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "28px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-lg-mobile": [
+                            "36px",
+                            {
+                                    "lineHeight": "36px",
+                                    "letterSpacing": "0.02em",
+                                    "fontWeight": "400"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+<style>
+        .glow-aqua {
+            box-shadow: 0 0 15px 2px rgba(0, 212, 255, 0.2);
+        }
+        .text-glow-aqua {
+            text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Top Navigation -->
+<nav class="docked full-width top-0 sticky bg-background/95 backdrop-blur-md shadow-md z-50">
+<div class="flex justify-between items-center w-full px-margin-desktop py-base max-w-7xl mx-auto z-50">
+<a class="text-headline-md font-headline-md text-on-surface dark:text-on-surface" href="#">SwimWithSatish</a>
+<div class="hidden md:flex gap-lg items-center">
+<a class="text-tertiary font-label-bold border-b-2 border-tertiary pb-1 hover:text-secondary transition-colors duration-300" href="#home">Home</a>
+<a class="text-on-surface-variant font-label-bold hover:text-secondary transition-colors duration-300" href="#courses">Courses</a>
+<a class="text-on-surface-variant font-label-bold hover:text-secondary transition-colors duration-300" href="#online-sessions">Online Sessions</a>
+<a class="text-on-surface-variant font-label-bold hover:text-secondary transition-colors duration-300" href="#gear">Gear Store</a>
+<a class="text-on-surface-variant font-label-bold hover:text-secondary transition-colors duration-300" href="#about">About</a>
+<a class="text-on-surface-variant font-label-bold hover:text-secondary transition-colors duration-300" href="#contact">Contact</a>
+</div>
+<button class="hidden md:inline-flex bg-tertiary text-on-tertiary font-label-bold px-md py-sm rounded uppercase hover:brightness-110 transition-all active:scale-95">Book Free Trial</button>
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-[90vh] flex items-center justify-center pt-xl pb-xl px-margin-mobile md:px-margin-desktop overflow-hidden" id="home">
+<div class="absolute inset-0 z-0">
+<div class="bg-cover bg-center w-full h-full opacity-40" data-alt="An elite swimmer in mid-butterfly stroke breaking the water surface. Shot from below water level looking up. High-speed photography capturing water droplets. Moody cinematic lighting with deep navy and electric blue tones, contrasting with the swimmer's skin tones. Professional athletic aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAQXNTUPRG5hKaD2ml-V0OcCbSxGrSd7loqJR4AY55R8ZYq3Yqi81ywTa6W82ijko4QJdPAgtcR5qOIhbx2H-ScPyNTucHLZxOB4h6fDRXBvRuwOVGbojaKcZQOD8tB6edOS627cI__dfONuuMIUJcSSxrVUp0wzcL6wqn0QLS_3Fnud8g0yptvWncIpKxdz3aNmqAw5aD92njRo1eHTdCZDGs4TLC6WboGXo1PeXeu7eZaIcCV4Xd1cQscywVao7bP4qPI3LgDEyU')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center gap-lg">
+<div class="flex flex-wrap justify-center gap-sm mb-sm">
+<span class="bg-secondary-container/10 text-secondary-container font-label-bold px-sm py-xs rounded border border-secondary-container/30 uppercase">NSNIS Certified</span>
+<span class="bg-secondary-container/10 text-secondary-container font-label-bold px-sm py-xs rounded border border-secondary-container/30 uppercase">16+ Years Experience</span>
+<span class="bg-secondary-container/10 text-secondary-container font-label-bold px-sm py-xs rounded border border-secondary-container/30 uppercase">500+ Students Trained</span>
+<span class="bg-secondary-container/10 text-secondary-container font-label-bold px-sm py-xs rounded border border-secondary-container/30 uppercase">All Levels Welcome</span>
+</div>
+<h1 class="text-headline-lg-mobile md:text-display-lg font-display-lg text-on-surface tracking-wide">
+<span class="block">TRAIN SMARTER.</span>
+<span class="block text-secondary text-glow-aqua">SWIM FASTER.</span>
+</h1>
+<p class="text-body-lg font-body-lg text-on-surface-variant max-w-2xl">
+                Unlock your full potential in the water with elite coaching from NSNIS Certified Head Coach Satish. From beginners to competitive athletes, master the technique that wins.
+            </p>
+<div class="flex flex-col sm:flex-row gap-md mt-md">
+<button class="bg-tertiary text-on-tertiary font-label-bold px-lg py-sm rounded uppercase hover:brightness-110 transition-all glow-aqua">Book Trial</button>
+<button class="border-2 border-secondary text-secondary font-label-bold px-lg py-sm rounded uppercase hover:bg-secondary/10 transition-all">Explore Courses</button>
+</div>
+</div>
+</section>
+<!-- SideNavBar (WhatsApp) -->
+<a class="fixed bottom-md right-md z-50 flex items-center justify-center p-4 rounded-full text-white bg-[#25D366] shadow-[0_0_15px_rgba(37,211,102,0.4)] shadow-lg hover:scale-110 hover:brightness-110 transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">chat</span>
+</a>
+<!-- Footer -->
+<section id="location" class="py-xl px-margin-mobile md:px-margin-desktop bg-surface-container-low">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-lg">
+      <h2 class="text-headline-lg font-headline-lg text-on-surface mb-sm">OUR TRAINING HUB</h2>
+      <div class="w-24 h-1 bg-tertiary mx-auto"></div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-lg items-center">
+      <div class="flex flex-col gap-md">
+        <div class="bg-surface-container-high p-md rounded border border-outline-variant">
+          <div class="flex items-start gap-sm mb-md">
+            <span class="material-symbols-outlined text-tertiary">location_on</span>
+            <div>
+              <h3 class="text-headline-md font-headline-md text-on-surface mb-xs">The Benares Club</h3>
+              <p class="text-body-lg text-on-surface-variant">Bhelupur, Varanasi, Uttar Pradesh 221010</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-sm mb-md">
+            <span class="material-symbols-outlined text-tertiary">call</span>
+            <div>
+              <h3 class="text-label-bold font-label-bold text-on-surface uppercase">Contact for Inquiries</h3>
+              <p class="text-body-md text-on-surface-variant">+91 98765 43210</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-sm">
+            <span class="material-symbols-outlined text-tertiary">schedule</span>
+            <div>
+              <h3 class="text-label-bold font-label-bold text-on-surface uppercase">Training Hours</h3>
+              <p class="text-body-md text-on-surface-variant">Mon - Sat: 6:00 AM - 9:00 AM, 4:00 PM - 7:00 PM</p>
+            </div>
+          </div>
+        </div>
+        <a href="https://maps.app.goo.gl/2zDmnkeV2UWU6Nt36" target="_blank" class="inline-flex items-center justify-center gap-sm bg-tertiary text-on-tertiary font-label-bold px-lg py-sm rounded uppercase hover:brightness-110 transition-all">
+          <span class="material-symbols-outlined">directions</span>
+          Get Directions
+        </a>
+      </div>
+      <div class="h-[400px] rounded overflow-hidden border border-outline-variant shadow-lg">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3606.944444444444!2d82.99!3d25.3!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e2df88888888b%3A0x8888888888888888!2sThe%20Benares%20Club!5e0!3m2!1sen!2sin!4v1715850000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section><footer class="bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-outline-variant full-width">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-lg px-margin-desktop py-xl max-w-7xl mx-auto">
+<div class="col-span-1 md:col-span-1">
+<h4 class="text-headline-md font-headline-md text-on-surface mb-sm">SwimWithSatish</h4>
+<p class="text-body-md font-body-md text-on-surface-variant">Elite swim coaching for all levels.</p>
+</div>
+<div class="flex flex-col gap-sm">
+<a class="text-on-surface-variant text-label-sm font-label-sm hover:text-tertiary transition-colors opacity-80 hover:opacity-100" href="#">Quick Links</a>
+<a class="text-on-surface-variant text-label-sm font-label-sm hover:text-tertiary transition-colors opacity-80 hover:opacity-100" href="#">Courses</a>
+<a class="text-on-surface-variant text-label-sm font-label-sm hover:text-tertiary transition-colors opacity-80 hover:opacity-100" href="#">Gear Store</a>
+<a class="text-on-surface-variant text-label-sm font-label-sm hover:text-tertiary transition-colors opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant text-label-sm font-label-sm hover:text-tertiary transition-colors opacity-80 hover:opacity-100" href="#">Contact Us</a>
+</div>
+<div class="col-span-1 md:col-span-2 flex flex-col justify-end items-start md:items-end mt-lg md:mt-0">
+<p class="text-body-md font-body-md text-on-surface-variant opacity-80">© 2024 SwimWithSatish. All rights reserved.</p>
+<p class="text-label-sm font-label-sm text-on-surface-variant opacity-60 mt-xs">Created by Stavix</p>
+</div>
+</div>
+</footer>
+
+
+</body></html>
