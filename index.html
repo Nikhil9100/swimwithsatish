@@ -1741,7 +1741,7 @@
     <style>
       .benefits-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 2rem;
         max-width: 1200px;
         margin: 0 auto;
@@ -1790,6 +1790,7 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+        object-position: center 20%;
         transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
       }
       .benefit-card:hover .benefit-img-wrapper img {
@@ -1842,7 +1843,7 @@
       <!-- Card 1 -->
       <div class="benefit-card reveal">
         <div class="benefit-img-wrapper">
-          <img src="./images/benefit_fullbody_1782996618121.png" alt="Full Body Workout">
+          <img src="./images/benefit_fullbody_new_male.png" alt="Full Body Workout">
         </div>
         <div class="benefit-content">
             <div class="benefit-icon-wrapper">
@@ -1856,7 +1857,7 @@
       <!-- Card 2 -->
       <div class="benefit-card reveal reveal-delay-1">
         <div class="benefit-img-wrapper">
-          <img src="./images/benefit_cardio_1782996628241.png" alt="Cardio & Heart Health">
+          <img src="./images/benefit_cardio_teen.png" alt="Cardio & Heart Health">
         </div>
         <div class="benefit-content">
             <div class="benefit-icon-wrapper">
@@ -1870,7 +1871,7 @@
       <!-- Card 3 -->
       <div class="benefit-card reveal reveal-delay-2">
         <div class="benefit-img-wrapper">
-          <img src="./images/benefit_safe_1782996639615.png" alt="Zero Impact & Safe">
+          <img src="./images/benefit_safe_nodumbbell.png" alt="Zero Impact & Safe">
         </div>
         <div class="benefit-content">
             <div class="benefit-icon-wrapper">
@@ -1884,7 +1885,7 @@
       <!-- Card 4 -->
       <div class="benefit-card reveal">
         <div class="benefit-img-wrapper">
-          <img src="./images/benefit_stress_1782996649228.png" alt="Stress Relief">
+          <img src="./images/benefit_stress_new.png" alt="Stress Relief">
         </div>
         <div class="benefit-content">
             <div class="benefit-icon-wrapper">
@@ -1898,7 +1899,7 @@
       <!-- Card 5 -->
       <div class="benefit-card reveal reveal-delay-1">
         <div class="benefit-img-wrapper">
-          <img src="./images/benefit_weight_1782996659767.png" alt="Effective Weight Loss">
+          <img src="./images/benefit_weight_new_male.png" alt="Effective Weight Loss">
         </div>
         <div class="benefit-content">
             <div class="benefit-icon-wrapper">
@@ -1912,7 +1913,7 @@
       <!-- Card 6 -->
       <div class="benefit-card reveal reveal-delay-2">
         <div class="benefit-img-wrapper">
-          <img src="./images/benefit_life_1782996670998.png" alt="Lifesaving Skill">
+          <img src="./images/benefit_life_new.png" alt="Lifesaving Skill">
         </div>
         <div class="benefit-content">
             <div class="benefit-icon-wrapper">
@@ -2352,7 +2353,7 @@
       padding: 0 5%;
       margin: 2rem auto 3rem auto;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2rem;
       max-width: 1200px;
     }
@@ -2416,21 +2417,77 @@
     .video-item:focus-within .video-title::after {
       width: 50%;
     }
+    .video-wrapper {
+      position: relative;
+      cursor: pointer;
+      aspect-ratio: 16 / 9;
+      overflow: hidden;
+    }
+    .video-wrapper video {
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover;
+    }
+    .custom-play-btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 60px;
+      height: 60px;
+      background: rgba(0, 210, 255, 0.8);
+      border-radius: 50%;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.3s, transform 0.3s;
+      z-index: 10;
+      pointer-events: none;
+    }
+    .video-item:hover .custom-play-btn:not(.hidden) {
+      transform: translate(-50%, -50%) scale(1.1);
+      background: rgba(0, 210, 255, 1);
+    }
+    .custom-play-btn.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+    .custom-play-btn svg {
+      width: 30px;
+      height: 30px;
+      margin-left: 4px;
+    }
   </style>
 
   <div class="video-grid reveal reveal-delay-2">
     <div class="video-item">
-      <video src="./Proof%20of%20work/Videos/Back%20stroke%20start%20and%20swim.mp4" controls style="width:100%; display:block;" preload="metadata"></video>
+      <div class="video-wrapper">
+        <video src="./Proof%20of%20work/Videos/Back%20stroke%20start%20and%20swim.mp4" style="width:100%; display:block;" preload="metadata" playsinline></video>
+        <div class="custom-play-btn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+      </div>
       <div class="watermark">SwimwithSatish</div>
       <div class="video-title">Back stroke start and swim</div>
     </div>
     <div class="video-item">
-      <video src="./Proof%20of%20work/Videos/Free%20style%20kick%20and%20Free%20style%20arm%20action%20elbow%20high%20practice%201.mp4" controls style="width:100%; display:block;" preload="metadata"></video>
+      <div class="video-wrapper">
+        <video src="./Proof%20of%20work/Videos/Free%20style%20kick%20and%20Free%20style%20arm%20action%20elbow%20high%20practice%201.mp4" style="width:100%; display:block;" preload="metadata" playsinline></video>
+        <div class="custom-play-btn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+      </div>
       <div class="watermark">SwimwithSatish</div>
       <div class="video-title">Free style kick and Free style arm action elbow high practice 1</div>
     </div>
     <div class="video-item">
-      <video src="./Proof%20of%20work/Videos/Sprint%20training%20Free%20style.mp4" controls style="width:100%; display:block;" preload="metadata"></video>
+      <div class="video-wrapper">
+        <video src="./Proof%20of%20work/Videos/Sprint%20training%20Free%20style.mp4" style="width:100%; display:block;" preload="metadata" playsinline></video>
+        <div class="custom-play-btn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+      </div>
       <div class="watermark">SwimwithSatish</div>
       <div class="video-title">Sprint training Free style</div>
     </div>
@@ -2786,7 +2843,7 @@
 </section>
 
 <!-- ═══════════════════════════════════════════════════ FOOTER -->
-<footer>
+<footer id="contact">
   <div class="footer-grid">
     <!-- Brand -->
     <div>
@@ -3085,5 +3142,49 @@
   <svg viewBox="0 0 24 24"><path d="M12.01 2.011a10 10 0 0 0-8.52 15.27L2 22l4.89-1.45a9.97 9.97 0 0 0 5.12 1.41h.01a10 10 0 0 0 10-10 10 10 0 0 0-10-9.95zm0 18.04c-1.61 0-3.19-.42-4.57-1.22l-.33-.2-3.41 1.01 1.03-3.32-.21-.35a8.1 8.1 0 0 1-1.27-4.43 8.17 8.17 0 0 1 8.17-8.17 8.17 8.17 0 0 1 8.17 8.16 8.17 8.17 0 0 1-8.17 8.16zm4.49-6.15c-.25-.12-1.47-.73-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.79.98-.15.16-.29.18-.54.06a6.83 6.83 0 0 1-2.02-1.25 7.54 7.54 0 0 1-1.4-1.74c-.15-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.16-.25.25-.41.08-.17.04-.32-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.49-.4-.42-.56-.43h-.48c-.16 0-.43.06-.65.3-.23.25-.86.84-.86 2.05s.89 2.38 1.01 2.54c.12.16 1.73 2.64 4.19 3.7.59.25 1.04.41 1.4.52.59.19 1.13.16 1.55.1.47-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.15-1.18-.06-.1-.23-.16-.48-.28z"/></svg>
 </a>
 
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const wrappers = document.querySelectorAll('.video-wrapper');
+    const videos = document.querySelectorAll('video');
+    
+    wrappers.forEach(wrapper => {
+      const video = wrapper.querySelector('video');
+      const btn = wrapper.querySelector('.custom-play-btn');
+      
+      wrapper.addEventListener('click', () => {
+        if (video.paused) {
+          video.play();
+        } else {
+          video.pause();
+        }
+      });
+      
+      video.addEventListener('play', () => {
+        btn.classList.add('hidden');
+        videos.forEach(v => {
+          if (v !== video) {
+            v.pause();
+          }
+        });
+      });
+      
+      video.addEventListener('pause', () => {
+        btn.classList.remove('hidden');
+      });
+    });
+
+    const pauseAll = () => {
+      videos.forEach(video => {
+        if (!video.paused) {
+          video.pause();
+        }
+      });
+    };
+
+    window.addEventListener('scroll', pauseAll, { passive: true });
+    window.addEventListener('wheel', pauseAll, { passive: true });
+    window.addEventListener('touchmove', pauseAll, { passive: true });
+  });
+</script>
 </body>
 </html>
